@@ -1,0 +1,9 @@
+# APK files
+*.apk
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.*

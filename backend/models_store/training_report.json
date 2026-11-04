@@ -1,0 +1,212 @@
+{
+  "trained_at": "2026-09-27T09:00:59.534445+00:00",
+  "dataset": "data/apps_dataset.csv",
+  "n_samples": 4000,
+  "n_train": 3200,
+  "n_test": 800,
+  "class_balance": {
+    "genuine": 2572,
+    "fake": 1428
+  },
+  "n_features": 3014,
+  "best_model": "random_forest",
+  "models": {
+    "random_forest": {
+      "accuracy": 0.9912,
+      "precision": 0.9895,
+      "recall": 0.986,
+      "f1": 0.9877,
+      "roc_auc": 0.9903,
+      "confusion_matrix": {
+        "tn": 511,
+        "fp": 3,
+        "fn": 4,
+        "tp": 282
+      },
+      "false_positive_rate": 0.0058,
+      "cv_f1_mean": 0.9672,
+      "cv_f1_std": 0.0089,
+      "train_seconds": 3.53
+    },
+    "svm": {
+      "accuracy": 0.99,
+      "precision": 0.9894,
+      "recall": 0.9825,
+      "f1": 0.986,
+      "roc_auc": 0.9873,
+      "confusion_matrix": {
+        "tn": 511,
+        "fp": 3,
+        "fn": 5,
+        "tp": 281
+      },
+      "false_positive_rate": 0.0058,
+      "cv_f1_mean": 0.9667,
+      "cv_f1_std": 0.009,
+      "train_seconds": 3.34
+    },
+    "logistic_regression": {
+      "accuracy": 0.9888,
+      "precision": 0.986,
+      "recall": 0.9825,
+      "f1": 0.9842,
+      "roc_auc": 0.9863,
+      "confusion_matrix": {
+        "tn": 510,
+        "fp": 4,
+        "fn": 5,
+        "tp": 281
+      },
+      "false_positive_rate": 0.0078,
+      "cv_f1_mean": 0.9655,
+      "cv_f1_std": 0.0091,
+      "train_seconds": 0.47
+    },
+    "xgboost": {
+      "accuracy": 0.9888,
+      "precision": 0.986,
+      "recall": 0.9825,
+      "f1": 0.9842,
+      "roc_auc": 0.9873,
+      "confusion_matrix": {
+        "tn": 510,
+        "fp": 4,
+        "fn": 5,
+        "tp": 281
+      },
+      "false_positive_rate": 0.0078,
+      "cv_f1_mean": 0.9663,
+      "cv_f1_std": 0.0072,
+      "train_seconds": 66.87
+    }
+  },
+  "top_features": [
+    {
+      "feature": "meta::perm_mismatch_count",
+      "importance": 0.06285
+    },
+    {
+      "feature": "meta::perm_mismatch_ratio",
+      "importance": 0.05666
+    },
+    {
+      "feature": "meta::perm_count",
+      "importance": 0.04773
+    },
+    {
+      "feature": "meta::name_brand_similarity",
+      "importance": 0.04457
+    },
+    {
+      "feature": "meta::perm_dangerous_ratio",
+      "importance": 0.04337
+    },
+    {
+      "feature": "meta::perm_dangerous_count",
+      "importance": 0.04032
+    },
+    {
+      "feature": "meta::review_duplicate_ratio",
+      "importance": 0.03408
+    },
+    {
+      "feature": "meta::review_unique_ratio",
+      "importance": 0.03292
+    },
+    {
+      "feature": "meta::has_sms_permission",
+      "importance": 0.03249
+    },
+    {
+      "feature": "meta::app_age_days_log",
+      "importance": 0.026
+    },
+    {
+      "feature": "meta::review_avg_length",
+      "importance": 0.0245
+    },
+    {
+      "feature": "meta::developer_app_count",
+      "importance": 0.02261
+    },
+    {
+      "feature": "meta::ratings_per_install",
+      "importance": 0.01484
+    },
+    {
+      "feature": "meta::name_has_fake_suffix",
+      "importance": 0.01445
+    },
+    {
+      "feature": "meta::desc_word_count",
+      "importance": 0.01364
+    },
+    {
+      "feature": "meta::desc_spam_ratio",
+      "importance": 0.01116
+    },
+    {
+      "feature": "meta::desc_caps_ratio",
+      "importance": 0.01042
+    },
+    {
+      "feature": "meta::rating",
+      "importance": 0.00965
+    },
+    {
+      "feature": "meta::desc_length",
+      "importance": 0.00919
+    },
+    {
+      "feature": "meta::desc_exclaim_density",
+      "importance": 0.0091
+    },
+    {
+      "feature": "meta::package_depth_anomaly",
+      "importance": 0.00697
+    },
+    {
+      "feature": "meta::has_privacy_policy",
+      "importance": 0.00695
+    },
+    {
+      "feature": "meta::name_length",
+      "importance": 0.00603
+    },
+    {
+      "feature": "meta::name_has_leetspeak",
+      "importance": 0.00571
+    },
+    {
+      "feature": "meta::has_install_packages_permission",
+      "importance": 0.00567
+    }
+  ],
+  "classification_report": {
+    "Genuine": {
+      "precision": 0.9922330097087378,
+      "recall": 0.9941634241245136,
+      "f1-score": 0.9931972789115646,
+      "support": 514.0
+    },
+    "Fake": {
+      "precision": 0.9894736842105263,
+      "recall": 0.986013986013986,
+      "f1-score": 0.9877408056042032,
+      "support": 286.0
+    },
+    "accuracy": 0.99125,
+    "macro avg": {
+      "precision": 0.9908533469596321,
+      "recall": 0.9900887050692498,
+      "f1-score": 0.9904690422578839,
+      "support": 800.0
+    },
+    "weighted avg": {
+      "precision": 0.9912465508431272,
+      "recall": 0.99125,
+      "f1-score": 0.991246589704183,
+      "support": 800.0
+    }
+  }
+}
